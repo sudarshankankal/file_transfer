@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled Icons-->
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled Jquery-->
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Node File Upload</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper light-blue darken-4">
+        <a href="#" class="brand-logo center">File Transfer System</a>
+      </div>
+    </nav>
+
+    <br />
+
+    <div class="container">
+      <div class="col s12 m7">
+        <div class="card horizontal  grey lighten-5">
+          <div class="card-stacked">
+            <div class="card-action">
+              <button
+                type="submit"
+                class="btn waves-effect waves-yellow yellow lighten-4 btn-flat z-depth-5 pulse "
+              >
+                Faster than light
+                <i class="material-icons right">send</i>
+                <i class="material-icons right">send</i>
+                <i class="material-icons right">send</i>
+              </button>
+
+              <!-- <a href="#" class="pulse btn-flat blue-text text-darken-2 "
+                >Fast than light</a
+              > -->
+              <a href="#" class="blue-text text-darken-2 pulse">
+                <%= typeof msg != 'undefined' ? msg : '' %></a
+              >
+            </div>
+
+            <div class="card-content">
+              <form
+                action="/upload"
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <div class="file-field input-field">
+                  <div class="btn light-blue darken-4">
+                    <span>Browse File</span>
+                    <input type="file" name="myImage" />
+                  </div>
+
+                  <div class="file-path-wrapper">
+                    <input
+                      class="file-path validate"
+                      placeholder="Click to upload"
+                      type="text"
+                    />
+                  </div>
+                </div>
+
+                <div class="col s10 offset-s1 center-align">
+                  <button
+                    type="submit"
+                    class="btn waves-effect waves-light light-blue darken-4 "
+                  >
+                    Submit
+
+                    <i class="material-icons right">file_upload</i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+
+      <!-- <img
+        class="responsive-img"
+        src="<%= typeof file != 'undefined' ? file : '' %>"
+      /> -->
+    </div>
+
+    <footer>
+      <div class="footer-copyright">
+        <div class="container blue-text text-darken-2">
+          © 2020 zCon Solutions Pvt Ltd.
+          <a class="blue-text text-darken-2 right" href="#!">Visit Link</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
